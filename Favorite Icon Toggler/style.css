@@ -1,0 +1,105 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f5f7fa;
+    color: #333;
+    padding: 40px 20px;
+    min-height: 100vh;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 2.5rem;
+    color: #2c3e50;
+    font-size: 2.4rem;
+    font-weight: 600;
+    letter-spacing: -0.5px;
+}
+
+.item-list {
+    max-width: 600px;
+    margin: 0 auto;
+    list-style: none;
+}
+
+.item-list li {
+    background: white;
+    margin-bottom: 1rem;
+    padding: 1.2rem 1.5rem;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: all 0.2s ease;
+}
+
+.item-list li:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+}
+
+.item-list li span {
+    display: flex;
+    align-items: center;
+}
+
+.favorite-ico {
+    font-size: 1.9rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #e0e0e0;           /* empty heart color */
+    transition: all 0.25s ease;
+    padding: 6px;
+    line-height: 1;
+}
+
+.favorite-ico:hover {
+    transform: scale(1.18);
+    color: #ff6b6b;
+}
+
+/* Filled heart state */
+.favorite-ico.filled {
+    color: #e74c3c;           /* red filled heart */
+    animation: heartBeat 0.4s ease;
+}
+
+/* Tiny heart beat animation when clicked */
+@keyframes heartBeat {
+    0%   { transform: scale(1); }
+    40%  { transform: scale(1.35); }
+    60%  { transform: scale(0.95); }
+    80%  { transform: scale(1.2); }
+    100% { transform: scale(1); }
+}
+
+/* Optional: make text look nicer */
+.item-list li {
+    font-size: 1.25rem;
+    font-weight: 500;
+}
+
+/* For smaller screens */
+@media (max-width: 500px) {
+    h1 {
+        font-size: 2rem;
+    }
+    
+    .item-list li {
+        padding: 1rem;
+        font-size: 1.1rem;
+    }
+    
+    .favorite-ico {
+        font-size: 1.8rem;
+    }
+}
