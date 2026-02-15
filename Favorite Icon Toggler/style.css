@@ -68,7 +68,7 @@ h1 {
 }
 
 /* Filled heart state */
-.favorite-ico.filled {
+.filled {
     color: #e74c3c;           /* red filled heart */
     animation: heartBeat 0.4s ease;
 }

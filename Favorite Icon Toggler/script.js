@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', () => {
     favoriteButtons.forEach(button => {
         button.addEventListener('click', () => {
             // 1. Toggle the 'filled' class
-            button.classList.toggle('filled');
+            console.log(button.classList.toggle('filled'));
 
             // 3. Toggle between empty ♡ (&#9825;) and filled ❤️ (&#10084;)
             if (button.classList.contains('filled')) {
